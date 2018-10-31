@@ -1,13 +1,13 @@
 from flask import Flask, url_for, render_template, request
-app = Flask(__name__)
 import os
 import json
+app = Flask(__name__)
 
 @app.route("/") #annotation tells the URL that will amek this function run
 def render_main():
     return render_template('home.html')
   
-def get_state_options(counties)
+def get_state_options(counties):
   bom=[]
   
   for county in counties:
@@ -19,9 +19,9 @@ def get_state_options(counties)
       
   options = ""
   for state in bom:
-    options += Markup("<option value=\"" + state + "\">" + State + "</option>")
+    options += Markup("<option value=\"" + state + "\">" + c + "</option>")
   
-  
+  print(options)
 
   if __name__=="__main__":
-    app.run(debug=False, port=54321)
+    app.run(debug=True, port=42069)
